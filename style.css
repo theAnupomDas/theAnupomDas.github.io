@@ -1,0 +1,328 @@
+/* --- Reset and Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #fcfcfc;
+    --text-color: #2b2b2b;
+    --accent-color: #6c757d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Elegant Font for Headings */
+h1, h2, h3, .logo {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* --- Fixed Navigation --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 13%;
+    background: rgba(252, 252, 252, 0.85); /* Slightly transparent */
+    backdrop-filter: blur(12px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    transition: padding 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar.scrolled {
+    padding: 1.2rem 13%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.logo {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- First Screen Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8%;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3.38rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    max-width: 450px;
+}
+
+/* --- Scrolling Details Sections --- */
+section:not(.hero) {
+    min-height: 70vh;
+    padding: 8rem 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Elegant little underline for section headers */
+section h2::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    background-color: var(--text-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content-wrapper {
+    max-width: 700px;
+}
+
+.content-wrapper p {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.email-link {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.email-link:hover {
+    border-color: var(--text-color);
+}
+
+/* --- Scroll Animations --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+        padding-top: 6rem;
+    }
+    
+    .hero-image {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-text p {
+        margin: 0 auto;
+    }
+
+    /* Basic hidden nav for mobile - would need a hamburger menu in production */
+    .nav-links {
+        display: none; 
+    }
+}
+
+.content-wrapper a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+
+
+
+
+
+
+
+/* --- List & Section Item Styles --- */
+.list-container {
+    text-align: left; /* Overrides the center alignment for readability */
+    width: 100%;
+}
+
+.list-item {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Remove bottom border from the last visible item to keep it clean */
+.list-item:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+.list-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-color);
+}
+
+.meta-data {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.list-item p {
+    font-size: 1.05rem;
+    margin-bottom: 0; /* Reset margin from the wrapper */
+}
+
+/* --- Expand/Collapse Functionality --- */
+/* --- Expand/Collapse Functionality & Animation --- */
+
+/* 1. The Expanded State (When the .hidden class is removed by JS) */
+.expandable {
+    max-height: 300px; /* Large enough to fit the content */
+    opacity: 1;
+    transform: translateY(0);
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    /* The smooth easing transition */
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                margin 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 2. The Collapsed State (Overrides standard display:none) */
+.expandable.hidden {
+    display: block; 
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-15px); /* Slides up slightly */
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom-color: transparent;
+    pointer-events: none; /* Prevents clicking on hidden text */
+}
+
+/* 3. The Toggle Button */
+.toggle-btn {
+    display: block;
+    margin: 2rem auto 0 auto;
+    background: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 0.8rem 2.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
