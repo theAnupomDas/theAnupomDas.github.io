@@ -15,11 +15,16 @@
         <div class="logo">
             <a href="#home">Anupom Das</a></li>
         </div>
-        <ul class="nav-links">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="primary-navigation">
             <!-- <li><a href="#home">Home</a></li> -->
             <li><a href="#about">About</a></li>
-            <li><a href="#about">Work</a></li>
-            <li><a href="#resume">Resume</a></li>
+            <li><a href="#experience">Work</a></li>
+            <!-- <li><a href="#resume">Resume</a></li> -->
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -49,15 +54,18 @@
     </section>
 
     <!-- Education-->
-    <section id="experience" class="fade-in">
+    <section id="education" class="fade-in">
         <h2>Education</h2>
         <div class="content-wrapper list-container">
             
             <!-- Visible Items -->
             <div class="list-item">
-                <h3>BSc (Engg.) in Computer Science and Engineering</h3>
-                <span class="meta-data">Mawlana Bhashani Science and Technology University | Aug 2023 - Present</span>
-                
+                <h3>Mawlana Bhashani Science and Technology University</h3>
+                <span class="meta-data">Computer Science and Engineering | Aug 2023 - Present </span>
+            </div>
+            <div class="list-item">
+                <h3>Dinajpur Govt. City College, Dinajpur</h3>
+                <span class="meta-data">Science | HSC | 2020- 2022 </span>
             </div>
             
             
@@ -84,7 +92,7 @@
                 <p>Taking classes, arranging camps</p>
             </div>
             <div class="list-item">
-                <h3>Operations Associate</h3>
+                <h3>Operations Associate </h3>
                 <span class="meta-data">Gonitzoggo | Dec 2021 - Present</span>
                 <p>Assisting on operations</p>
             </div>
@@ -104,15 +112,146 @@
 
 
     
-    
+    <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <div class="content-wrapper compact-list-container list-container">
+            
+            <div class="compact-item">
+                <div class="compact-header">
+                    <div class="title-group">
+                        <h3>
+                            <a href="https://github.com/theAnupomDas/LibraryAssistant" target="_blank" rel="noopener">
+                                Library Assistant (AI-Powered)
+                            </a>
+                        </h3>
+                        <span class="institution">Web Application | ASP.NET | React</span>
+                    </div>
+                </div>
+                <p>An web app for searching library books, AI based book recommendation and Management.</p>
+            </div>
+
+            <div class="compact-item">
+                <div class="compact-header">
+                    <div class="title-group">
+                        <h3>
+                            <a href="https://github.com/theAnupomDas/Library_Management_Project_with_C" target="_blank" rel="noopener">
+                                Library Management System
+                            </a>
+                        </h3>
+                        <span class="institution">CLI, C programming</span>
+                    </div>
+                </div>
+                <p>Academic Project with Structured programming </p>
+            </div>
+
+            
+
+            <!-- <div class="compact-item expandable hidden">
+                <div class="compact-header">
+                    <div class="title-group">
+                        <h3>
+                            <a href="#" target="_blank" rel="noopener">
+                                Personal Portfolio
+                            </a>
+                        </h3>
+                        <span class="divider">/</span>
+                        <span class="institution">UI/UX Design</span>
+                    </div>
+                </div>
+                <p>A highly optimized, minimalistic portfolio built from scratch using pure HTML, CSS, and vanilla JavaScript.</p>
+            </div>
+
+            <button class="toggle-btn">See More</button> -->
+        </div>
+    </section>
+
+
+     <section id="courses" class="fade-in">
+        <h2>Courses</h2>
+        <div class="content-wrapper compact-list-container list-container">
+            <li>
+            <div class="compact-item">
+                <div class="compact-header">
+                    <div class="title-group">
+                        <h3>
+                            <a href="https://training.edge.gov.bd/storage/certificate/student-training/certificate_68eb83a9ee7aa0.89238951.pdf" target="_blank" rel="noopener">
+                                C# DOTNET
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <p>ICT Division, Govt. of Bangladesh | Mar 2025 - Sep 2025 </p>
+            </div>
+            </li>
+
+            <li>
+             <div class="compact-item">
+                <div class="compact-header">
+                    <div class="title-group">
+                        <h3>
+                            <a href="https://drive.google.com/file/d/1mG9RPh6_EO0CUDhPpkoviPWj4kb-AVWG/view" target="_blank" rel="noopener">
+                                Qubes Quantum Fundamentals
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <p>Q-munity (acquired by The Quantum Insider) | 2021 </p>
+            </div>
+            </li>
+
+             <li>
+             <div class="compact-item">
+                <div class="compact-header">
+                    <div class="title-group">
+                        <h3>
+                            <a href="https://www.coursera.org/account/accomplishments/verify/ZZBKYVH4M5TF" target="_blank" rel="noopener">
+                                Learning How to Learn for Youth
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+                <p>Coursera | Arizona State University | Jul 2020</p>
+            </div>
+            </li>
+            
+            
+
+            
+
+            <!-- <div class="compact-item expandable hidden">
+                <div class="compact-header">
+                    <div class="title-group">
+                        <h3>
+                            <a href="#" target="_blank" rel="noopener">
+                                Personal Portfolio
+                            </a>
+                        </h3>
+                        <span class="divider">/</span>
+                        <span class="institution">UI/UX Design</span>
+                    </div>
+                </div>
+                <p>A highly optimized, minimalistic portfolio built from scratch using pure HTML, CSS, and vanilla JavaScript.</p>
+            </div>
+            </li>
+
+            <button class="toggle-btn">See More</button> -->
+            
+        </div>
+    </section>
 
     
 
     <section id="contact" class="fade-in">
-        <h2>Contact</h2>
+        <h2>Get in Touch</h2>
         <div class="content-wrapper">
-            <!-- <p>Contact me.</p> -->
-            <a href="anupomdas225@gmail.com" class="email-link">anupomdas225@gmail.com</a>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out.</p>
+            
+            <div class="contact-links">
+                <a href="anupomdas225@gmail.com" class="social-link">anupomdas225@gmail.com</a>
+                <span class="divider">/</span>
+                <a href="https://linkedin.com/in/theAnupomDas" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+                
+            </div>
         </div>
     </section>
 

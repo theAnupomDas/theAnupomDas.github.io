@@ -1,5 +1,7 @@
 
 const navbar = document.querySelector('.navbar');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelectorAll('.nav-links a');
 
 window.addEventListener('scroll', () => {
     // If we scroll down more than 50 pixels, add the 'scrolled' class
@@ -9,6 +11,20 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
 });
+
+if (navToggle && navbar) {
+    navToggle.addEventListener('click', () => {
+        const isOpen = navbar.classList.toggle('menu-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('menu-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
 
 // 2. Elegant Fade-In Animation on Scroll
 const faders = document.querySelectorAll('.fade-in');
